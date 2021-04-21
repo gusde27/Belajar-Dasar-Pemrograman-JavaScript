@@ -1,11 +1,41 @@
-let json = '{ "nam": "Yoda", "age": 20 }';
+//let json = '{ "name": "Yoda", "age": 20 }';
+ 
+// try {
+//     let user = JSON.parse(json);
+ 
+//     console.log(user.name);
+//     console.log(user.age);
+// } catch (error) {
+//     console.log(error.name);
+//     console.log(error.message);
+// }
+
+//let json = '{ bad json }';
+ 
+// try {
+//     let user = JSON.parse(json);
+ 
+//     console.log(user.name);
+//     console.log(user.age);
+// } catch (error) {
+//     console.log(error.name);
+//     console.log(error.message);
+// }
+
+let json = '{ "age": 20, "name": "gusde" }';
  
 try {
     let user = JSON.parse(json);
  
-    console.log(user.name);
-    console.log(user.age);
+    if (!user.name) {
+        throw new SyntaxError("'name' is required.");
+    }
+    if (!user.age) {
+        throw new SyntaxError("'age' is required.");
+    }
+ 
+    console.log(user.name); // undefined
+    console.log(user.age);  // 20
 } catch (error) {
-    console.log(error.name);
-    console.log(error.message);
+    console.log(`JSON Error: ${error.message}`);
 }
