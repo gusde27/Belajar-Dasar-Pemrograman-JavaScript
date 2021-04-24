@@ -1,7 +1,7 @@
-const executorFunction = (resolve, reject) => {
+const executorFunction = (resolv, reject) => {
     const isCoffeeMakerReady = true;
     if (isCoffeeMakerReady) {
-        resolve("Kopi berhasil dibuat");
+        resolv("Kopi berhasil dibuat");
     } else {
         reject("Mesin kopi tidak bisa digunakan");
     }
@@ -11,8 +11,9 @@ const executorFunction = (resolve, reject) => {
 const makeCoffee = () => {
     return new Promise(executorFunction);
 }
-const coffeePromise = makeCoffee();
-console.log(coffeePromise);
+
+console.log(makeCoffee());
+//console.log(coffeePromise);
  
  
 /* output
