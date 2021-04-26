@@ -1,0 +1,4 @@
+perintah :
+npm uninstall <package-name>
+npm uninstall <package-name> --save-dev
+npm uninstall lodash
